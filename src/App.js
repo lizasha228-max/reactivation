@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Letter from './CopyPast';
 
-function App() {
+const objData = {
+  nickname: "Luna",
+}
+
+const copyObjData = {...objData};
+console.log("copydata",copyObjData);
+const {nickname} = objData;
+console.log("nickname", nickname);
+
+function App(props) {
+  console.log(props,"uhukhukjhkhkh")
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +29,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Letter/>
     </div>
   );
 }
