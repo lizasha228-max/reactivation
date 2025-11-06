@@ -21,7 +21,10 @@ function App({...props}) {
   console.log( "PROPS", props)
   return (
     <div className="App">
-      <div><Header/></div>
+      <div>
+        <Header/>
+        <Technologies/>
+        </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -46,6 +49,17 @@ function App({...props}) {
      <input type="date" name="" id="" />
     </div>
   );
+}
+
+const Technologies = () => {
+return (
+  <div>
+    <li>css</li>
+    <li>html</li>
+    <li>js</li>
+    <li>react</li>
+  </div>
+)
 }
 
 const Header = () => {
