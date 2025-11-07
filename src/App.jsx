@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Letter from './LetterComponen';
 import Texted from './TextComponent';
+import Header from "./Header";
+import Technologies from './Technologies';
 
 const objData = {
   nickname: "Luna",
@@ -24,21 +26,8 @@ function App({...props}) {
       <div>
         <Header/>
         <Technologies/>
+        <Fruits/>
         </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
       <Letter text="ABBSBS ABSBASBS GAMALA" />
       <Letter text="SECOND TEXT" />
       <Letter text="Hallo world!" counter={objDataCounter}/>
@@ -51,23 +40,12 @@ function App({...props}) {
   );
 }
 
-const Technologies = () => {
-return (
-  <div>
-    <li>css</li>
-    <li>html</li>
-    <li>js</li>
-    <li>react</li>
-  </div>
-)
-}
-
-const Header = () => {
+const Fruits = () => {
   return (
     <div>
-      <a>Home</a>
-      <a>News Feed</a>
-      <a>Messages</a>
+      <p>Apple</p>
+      <p>Pear</p>
+      <p>Grape</p>
     </div>
   )
 }
