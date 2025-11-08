@@ -4,6 +4,7 @@ import Letter from './LetterComponen';
 import Texted from './TextComponent';
 import Header from "./Header";
 import Technologies from './Technologies';
+import Footer from './Footer';
 
 const objData = {
   nickname: "Luna",
@@ -24,9 +25,8 @@ function App({...props}) {
   return (
     <div className="App">
       <div>
-        <Header/>
-        <Technologies/>
-        <Fruits/>
+        <Header />
+      <Footer />
         </div>
       <Letter text="ABBSBS ABSBASBS GAMALA" />
       <Letter text="SECOND TEXT" />
