@@ -5,7 +5,7 @@ const Post = (props) => {
       <img src="https://img.freepik.com/premium-vector/young-blonde-woman-social-media-avatar_506604-469.jpg" />
        {props.message}
         <div>
-          <span>Like</span>
+          <span>Like</span>{props.likescount}
         </div>
         </div>
 } 
