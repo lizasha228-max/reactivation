@@ -1,9 +1,11 @@
 
+import {Route, Routes } from 'react-router-dom';
 import './App.css';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-// import Profile from './components/Profile/Profile';
+import Profile from './components/Profile/Profile';
+
 
 
 const App = () => {
@@ -11,10 +13,12 @@ const App = () => {
     <div className="app-wrapper">
        <Header />
        <NavBar />
-       <div class="app-wrapper-content">
-        <Dialogs />
+       <div className="app-wrapper-content">
+        <Routes>
+         <Route path='/dialogs' element={<Dialogs/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        </Routes>
        </div>
-       {/* <Profile /> */}
     </div>
   )
 }
