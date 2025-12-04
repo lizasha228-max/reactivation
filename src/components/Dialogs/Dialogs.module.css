@@ -1,0 +1,21 @@
+.main__wrapper{
+    display:flex;
+}
+
+.dialogs{
+    padding: 10px;
+}
+
+.dialogs .active{
+    background-color: red;
+    color:white;
+}
+
+.dialog a{
+    text-decoration: none;
+    color:black;
+}
+
+.messages{
+    padding: 10px;
+}
