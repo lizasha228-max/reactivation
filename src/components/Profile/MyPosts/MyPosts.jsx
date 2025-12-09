@@ -2,10 +2,10 @@ import classes from "./MyPosts.module.css";
 import Post from "./Post";
 
 const MyPosts = () => {
-    return   <div>
-        my posts
+    return   <div className={classes.mypost__main}>
+        My Posts
       <div>
-       <textarea></textarea>
+        <div className={classes.post__area}><textarea></textarea></div>
        <button type="button">New Post</button>
         </div>
       <div className="post">

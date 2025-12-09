@@ -1,7 +1,11 @@
 .contentImg{
   width: 100%;
   display: flex;
-  justify-content: center;
 }
+
+.main__content{
+  padding: 10px;
+}
+
 
 

@@ -1,34 +1,37 @@
 import { NavLink } from "react-router-dom";
 import classes from "./Dialogs.module.css";
 
-const Dialogs = () => {
+const DialogItem = (props) => {
+  let path = "/dialogs/" + props.id;
+  return (
+    <div className={classes.dialog + " " + classes.active}>
+      <NavLink to={path}>{props.name}</NavLink>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return <div className={classes.message}>{props.message}</div>;
+};
+
+const Dialogs = (props) => {
   return (
     <div className={classes.main__wrapper}>
       <div className={classes.dialogs}>
         <div className={classes.dialog}>
-            <div>
-           <NavLink to="/dialogs/1"> Anna </NavLink>
-            </div>
-        <div className={classes.dialog + ' ' + classes.active}>
-            <NavLink to="/dialogs/2"> Liza </NavLink>
-            </div>
-        <div className={classes.dialog}>
-            <NavLink to="/dialogs/3"> Mishel </NavLink>
-            </div>
-        <div className={classes.dialog}>
-           <NavLink to="/dialogs/4"> Serhii </NavLink> 
-            </div>
-        <div className={classes.dialog}>
-           <NavLink to="/dialogs/5"> Kristian </NavLink> 
-            </div>
-            </div>
+          <DialogItem name="Liza" id="1" />
+          <DialogItem name="Anna" id="2" />
+          <DialogItem name="Mishel" id="3" />
+          <DialogItem name="Serhii" id="4" />
+          <DialogItem name="Kristian" id="5" />
+        </div>
       </div>
       <div className={classes.messages}>
-        <div className={classes.message}>Hi!</div>
-        <div className={classes.message}>Hi!How are you?</div>
-        <div className={classes.message}>I`m fine</div>
-        <div className={classes.message}>How will you celebrate New Year?</div>
-        <div className={classes.message}>I will celebrate with my parents</div>
+        <Message message="Hi!" />
+        <Message message="Hi!How are you?" />
+        <Message message="I`m fine" />
+        <Message message="How will you celebrate New Year?" />
+        <Message message="I will celebrate with my parents<" />
       </div>
     </div>
   );
